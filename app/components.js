@@ -26,6 +26,7 @@ angular.module('components', [])
             template: '<div>' +
             '<ul class="menu">' +
             '<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">'+
+            '<i class="{{pane.icon}}"></i>' +
             '<a href="" ng-click="select(pane)">{{pane.title}}</a>' +
             '</li>' +
             '</ul>' +
@@ -44,10 +45,11 @@ angular.module('components', [])
                 icon: '@',
                 title: '@'
             },
-            link: function(scope, element, attrs, tabsController) {
-                tabsController.addPane(scope);
+            link: function(scope, element, attrs, tabController) {
+                tabController.addPane(scope);
             },
-            template: '<div class="tab-pane" ng-class="{active: selected}" ng-transclude>' + '</div>',
+            template: '<div class="tab-pane" ng-class="{active: selected}" ng-transclude>' +
+            '</div>',
             replace: true
         }
 });

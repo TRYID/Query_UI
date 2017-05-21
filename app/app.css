@@ -5,27 +5,18 @@ body {
 }
 
 .menu {
+  float: left;
   list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
+  margin-bottom: 0px;
+  padding: 0px 20px;
 }
 
 .menu > li {
   display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+  border: 2px solid lightgray;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 0px;
 }
 
 div {
@@ -37,13 +28,14 @@ div {
   min-height: 900px;
   min-width: 1100px;
   overflow: auto;
+  clear: left;
 }
 
 .left_sidebar {
   position: absolute;
+  float: left;
   display: inline;
   border: solid 5px white;
-  left: 0px;
   width: 280px;
   height: 100%;
 }
@@ -76,6 +68,7 @@ div {
   border: solid 5px white;
   width: 100%;
   text-align: center;
+  clear: both;
 }
 
 .table {
