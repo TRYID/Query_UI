@@ -1,14 +1,14 @@
-<div class="container">
+<div data-ng-model="query" ng-controller="QueryCtrl" class="container">
     <div class="left_sidebar">
         <span>Type Selection<select style="float: right; width: auto">
-            <option>SampleData0</option>
-            <option>SampleData1</option>
-            <option>SampleData2</option>
-            <option>SampleData3</option>
-            <option>SampleData4</option>
-            <option>SampleData5</option>
-            <option>SampleData6</option>
-            <option>SampleData7</option>
+            <option value="0">SampleData0</option>
+            <option value="1">SampleData1</option>
+            <option value="2">SampleData2</option>
+            <option value="3">SampleData3</option>
+            <option value="4">SampleData4</option>
+            <option value="5">SampleData5</option>
+            <option value="6">SampleData6</option>
+            <option value="7">SampleData7</option>
         </select></span>
         <span><select style="width: 100%"><option>Select to Add Query Pararmeter</option></select></span>
         <ul style="background-color: #999999; color: white; text-align: center">
@@ -21,7 +21,17 @@
     </div>
     <div class="content_area">
         <div class="table">
-            <p>No Query Data Available</p>
+            <table class="query_table">
+                <tr ng-repeat="data in data" >
+                    <td>{{data.id}}</td>
+                    <td>{{data.val[0]}}</td>
+                    <td>{{data.val[1]}}</td>
+                    <td>{{data.val[2]}}</td>
+                    <td>{{data.val[3]}}</td>
+                    <td>{{data.val[4]}}</td>
+                    <td>{{data.val[5]}}</td>
+                </tr>
+            </table>
         </div>
         <div class="chart">
             <p>No Query Data Visualisation Available</p>
